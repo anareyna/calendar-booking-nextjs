@@ -1,4 +1,4 @@
-import NavLink from "@/components/ui/NavLink";
+import NavLink from "@/components/NavLink";
 import { UserButton } from "@clerk/nextjs";
 import { CalendarRange } from "lucide-react";
 import { ReactNode } from "react";
