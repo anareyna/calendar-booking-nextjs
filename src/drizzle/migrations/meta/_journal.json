@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1728462558324,
+      "tag": "0000_outgoing_omega_flight",
+      "breakpoints": true
+    }
+  ]
+}
