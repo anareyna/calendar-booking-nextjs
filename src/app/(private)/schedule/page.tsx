@@ -7,13 +7,11 @@ export const revalidate = 0;
 
 export default async function SchedulePage() {
 	const { userId, redirectToSignIn } = auth();
-	if (userId == null) redirectToSignIn();
+	if (userId == null) return redirectToSignIn();
 
 	const schedule = await db.query.ScheduleTable.findFirst({
 		where: ({ clerkUserId }, { eq }) => eq(clerkUserId, userId),
-		with: {
-			availabilities: true,
-		},
+		with: { availabilities: true },
 	});
 	return (
 		<Card className="max-w-md mx-auto">
