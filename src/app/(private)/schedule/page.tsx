@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { db } from "@/drizzle/db";
 import { auth } from "@clerk/nextjs/server";
 
+export const revalidate = 0;
+
 export default async function SchedulePage() {
 	const { userId, redirectToSignIn } = auth();
 	if (userId == null) redirectToSignIn();
